@@ -5,37 +5,37 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA Comptatible" content="ie.edge">
-        <link rel="stylesheet" href="assets/css/condition.style">
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylsheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="./assets/css/dashboard.css" />
         <title>Weather Dashboard</title>
     </head>
 
-    <body>
+    <body class="flex-column min-100-vh">
         <header>
             <h1>Weather Dasboard</h1>
         </header>
-        
-        <aside>
-            <div>
+
+        <main class="flex-row justifyspace-between">
+            <div class="col-12 col-md-4">
                 <div class="card">
-                    <h2 class=>Search for a City:</h2>
-                    <form id="city-search">
-                        <input name="city" id="city-input" type="text" autofocus="true" />
+                    <h2 class="card-header">Search for a City:</h2>
+                    <form id="city-box" class="card-body form-control">
+                        <input name="City" id="city-search" type="text" autofocus="true" class="form-input" />
                         <button type="submit" class="btn">Search</button>
                     </form>
                 </div>
-            </div>
 
-            <div class="city-history">
+                <div id="search-history">
 
-            </div>
-        </aside>
+                </div>
 
-        <main>
-            <div>
+                <div class="col-12 col-md-8">
+                    <h2></h2>
+                    <div id="city-facts" class="list-group"></div>
 
-            </div>
 
-            <div>
+                </div>
 
             </div>
         </main>
