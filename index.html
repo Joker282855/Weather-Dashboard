@@ -17,28 +17,39 @@
             <h1 class="bg-primary text-white">Weather Dasboard</h1>
         </header>
 
-        <main class="flex-row flex-wrap justify-space-between">
-            <div class="col-12 col-md-4">
-                <div class="card">
-                    <h2 class="card-header">Search for a City:</h2>
-                    <form id="city-box" class="card-body">
-                        <input name="City" id="city-search" type="text" autofocus="true" class="form-input form-control" />
-                        <button type="submit" class="btn form-control bg-secondary text-white">Search</button>
-                    </form>
+        <main class="flex-row justify-space-between">
+            <aside class="col-12 col-md-4 float-left">
+                <div class="history-search">
+                    <div class="card">
+                        <h2 class="card-header">Search for a City:</h2>
+                        <form id="city-box" class="card-body">
+                            <input name="City" id="city-search" type="text" autofocus="true" class="form-input form-control" />
+                            <button type="submit" class="btn form-control bg-secondary text-white">Search</button>
+                        </form>
+                    </div>
+                    
+                    </br>
+                    
+                    <div id="search-history" class="history">
+    
+                    </div>
                 </div>
-                
+            </aside>
+            
+            <section class="d-flex flex-column flex-wrap">
+                <div class="col-12 col-md-12 conditions">
+                    <div id="city-facts" class="list-group">
+                       <h2></h2> 
+                    </div>
+                </div>
+
                 </br>
-                
-                <div id="search-history" class="history">
 
+                <div class="col-12 col-md-12 future">
+                    <h2 class="subtitle">5-Day Forecast:</h2>
+                    <div id="five-days" class="list-group"></div>
                 </div>
-            </div>
-
-            <div class="col-12 col-md-8 conditions">
-                <div id="city-facts" class="list-group">
-                    <h2></h2>
-                </div>
-            </div>
+            </section>
         </main>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
