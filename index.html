@@ -7,22 +7,23 @@
         <meta http-equiv="X-UA Comptatible" content="ie.edge">
         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylsheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="./assets/css/dashboard.css" />
         <title>Weather Dashboard</title>
     </head>
 
     <body class="flex-column min-100-vh">
         <header>
-            <h1>Weather Dasboard</h1>
+            <h1 class="bg-primary text-white">Weather Dasboard</h1>
         </header>
 
-        <main class="flex-row justifyspace-between">
+        <main class="d-flex-row justify-space-between">
             <div class="col-12 col-md-4">
                 <div class="card">
                     <h2 class="card-header">Search for a City:</h2>
-                    <form id="city-box" class="card-body form-control">
-                        <input name="City" id="city-search" type="text" autofocus="true" class="form-input" />
-                        <button type="submit" class="btn">Search</button>
+                    <form id="city-box" class="card-body">
+                        <input name="City" id="city-search" type="text" autofocus="true" class="form-input form-control" />
+                        <button type="submit" class="btn form-control bg-secondary text-white">Search</button>
                     </form>
                 </div>
 
@@ -39,7 +40,8 @@
 
             </div>
         </main>
-    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="./assets/js/weather.js"></script>
     </body>
 </htm>
