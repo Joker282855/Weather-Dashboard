@@ -10,6 +10,7 @@ var getCityInformation = function(city) {
   fetch(cityUrl).then(function(response) {
       response.json().then(function(data) {
           displayCityName(data, city);
+          displayCityInfo(data, city);
       })
   })
 };
@@ -56,6 +57,11 @@ var displayCityName = function(city, searchTerm) {
         // append the div container to its parent container
         citySearchEl.appendChild(cityEl);
     }
+}
+
+var displayCityInfo = function(city, searchTerm) {
+    console.log(city);
+    console.log(searchTerm);
 }
 
 cityFormEl.addEventListener("submit", citySubmitHandler);
