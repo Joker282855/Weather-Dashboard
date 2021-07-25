@@ -38,9 +38,9 @@ var displayCityName = function(city, searchTerm) {
     // loop over the city searches
     for (var i = 0; i < city.name.length; i++) {
         // format city's name
-        var cityName = city.name;
+        var cityName = city.name
         console.log(cityName);
-
+        
         // create a container for each of the buttons
         var cityEl = document.createElement("div");
         cityEl.classList = "list-item flex-row justify-space-between align-center"
