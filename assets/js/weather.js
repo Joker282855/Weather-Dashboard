@@ -1,3 +1,8 @@
+var cityHumidityEl = document.querySelector("#moisture");
+var cityWindEl = document.querySelector("#blow");
+var cityTempEl = document.querySelector("#cold-hot");
+var nameOfCityEl = document.querySelector("#weather-name");
+var searchInforEl = document.querySelector("#city-facts");
 var citySearchEl = document.querySelector("#search-history");
 var cityFormEl = document.querySelector("#city-box");
 var cityInputEl = document.querySelector("#city-search");
@@ -62,6 +67,27 @@ var displayCityName = function(city, searchTerm) {
 var displayCityInfo = function(city, searchTerm) {
     console.log(city);
     console.log(searchTerm);
+
+    // create variables that hole the information for the spans
+    var name = city.name
+    console.log(name);
+
+    var temperature = city.main.temp
+    console.log(temperature);
+
+    var wind = city.wind.speed
+    console.log(wind);
+
+    var humidity = city.main.humidity
+    console.log(humidity);
+
+    // tell the computer what the text content for each of the different conditions are
+
+    nameOfCityEl.textContent = name;
+    cityTempEl.textContent = temperature;
+    cityWindEl.textContent = wind;
+    cityHumidityEl.textContent = humidity
+
 }
 
 cityFormEl.addEventListener("submit", citySubmitHandler);
