@@ -57,7 +57,7 @@ var displayCityName = function(city, searchTerm) {
 
     // append the div container to its parent container
     citySearchEl.appendChild(cityEl);
-}
+};
 
 var displayCityInfo = function(city, searchTerm) {
     console.log(city);
@@ -83,6 +83,25 @@ var displayCityInfo = function(city, searchTerm) {
     cityWindEl.textContent = wind;
     cityHumidityEl.textContent = humidity
 
+};
+
+var getFutureForecast = function(search) {
+    // format the second response when they search for a city
+    var future = "https://api.openweathermap.org/data/2.5/forecast?q=" + search + "&appid=22f77c72887272eb5c62d174a8e491b8";
+
+    fetch(future).then(function(response) {
+        response.json().then(function(data) {
+            console.log(data);
+        });
+    });
+};
+
+getFutureForecast("Los Angeles");
+
+var futureConditionHandler = function(event) {
+    event.preventDefault();
+    console.log(event);
 }
 
 cityFormEl.addEventListener("submit", citySubmitHandler);
+cityFormEl.addEventListener("submit", futureConditionHandler);
