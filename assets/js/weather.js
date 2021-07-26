@@ -38,31 +38,25 @@ var citySubmitHandler = function(event) {
 var displayCityName = function(city, searchTerm) {
     console.log(city);
     console.log(searchTerm);
-
-    // clear old city search
-    citySearchEl.textContent = "";
-
-    // loop over the city searches
-    for (var i = 0; i < city.name.length; i++) {
-        // format city's name
-        var cityName = city.name
-        console.log(cityName);
+    
+    // format city's name
+    var cityName = city.name
+    console.log(cityName);
         
-        // create a container for each of the buttons
-        var cityEl = document.createElement("div");
-        cityEl.classList = "list-item flex-row justify-space-between align-center"
+    // create a container for each of the buttons
+    var cityEl = document.createElement("div");
+    cityEl.classList = "flex-row justify-space-between align-item-center"
 
-        // create the button for the recent search
-        var buttonEl = document.createElement("button");
-        buttonEl.textContent = cityName;
-        buttonEl.classList = "bg-secondary"
+    // create the button for the recent search
+    var buttonEl = document.createElement("button");
+    buttonEl.textContent = cityName;
+    buttonEl.classList = "bg-secondary"
 
-        // append the button element to the container
-        cityEl.appendChild(buttonEl);
+    // append the button element to the container
+    cityEl.appendChild(buttonEl);
 
-        // append the div container to its parent container
-        citySearchEl.appendChild(cityEl);
-    }
+    // append the div container to its parent container
+    citySearchEl.appendChild(cityEl);
 }
 
 var displayCityInfo = function(city, searchTerm) {
