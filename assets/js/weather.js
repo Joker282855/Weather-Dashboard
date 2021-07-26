@@ -33,6 +33,15 @@ var getCityInformation = function(city) {
           displayCityInfo(data, city);
       })
   })
+
+   // format the second response when they search for a city
+   var future = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=22f77c72887272eb5c62d174a8e491b8";
+
+   fetch(future).then(function(response) {
+       response.json().then(function(data) {
+           displayForecast(data, city);
+       })
+   })
 };
 
 var citySubmitHandler = function(event) {
@@ -47,6 +56,13 @@ var citySubmitHandler = function(event) {
         alert("Please enter the name of an American City");
     }
     console.log(event);
+
+    var future = cityInputEl.value.trim();
+
+    if (future) {
+        getFutureForecast(future)
+        cityInputEl.value = "";
+    }    
 };
 
 var displayCityName = function(city, searchTerm) {
@@ -97,29 +113,6 @@ var displayCityInfo = function(city, searchTerm) {
     cityWindEl.textContent = wind;
     cityHumidityEl.textContent = humidity
 
-};
-
-var getFutureForecast = function(search) {
-    // format the second response when they search for a city
-    var future = "https://api.openweathermap.org/data/2.5/forecast?q=" + search + "&appid=22f77c72887272eb5c62d174a8e491b8";
-
-    fetch(future).then(function(response) {
-        response.json().then(function(data) {
-            displayForecast(data, search);
-        })
-    })
-};
-
-var futureConditionHandler = function(event) {
-    event.preventDefault();
-    console.log(event);
-
-    var future = cityInputEl.value.trim();
-
-    if (future) {
-        getFutureForecast(future)
-        cityInputEl.value = "";
-    }
 };
 
 var displayForecast  = function(search, searchTerm) {
@@ -184,4 +177,3 @@ var displayForecast  = function(search, searchTerm) {
 }
 
 cityFormEl.addEventListener("submit", citySubmitHandler);
-cityFormEl.addEventListener("submit", futureConditionHandler);
