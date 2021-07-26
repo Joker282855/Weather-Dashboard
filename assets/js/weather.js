@@ -91,7 +91,7 @@ var getFutureForecast = function(search) {
 
     fetch(future).then(function(response) {
         response.json().then(function(data) {
-            console.log(data);
+            displayForecast(data, search);
         });
     });
 };
@@ -101,6 +101,18 @@ getFutureForecast("Los Angeles");
 var futureConditionHandler = function(event) {
     event.preventDefault();
     console.log(event);
+
+    var future = cityInputEl.value.trim();
+
+    if (future) {
+        getFutureForecast(future)
+        cityInputEl.value = "";
+    }
+};
+
+var displayForecast  = function(search, searchTerm) {
+    console.log(search);
+    console.log(searchTerm);
 }
 
 cityFormEl.addEventListener("submit", citySubmitHandler);
