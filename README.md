@@ -22,7 +22,7 @@ I acheived as many as the tasks listed above by reviewing the module for challen
 <a href="https://joker282855.github.io/Weather-Dashboard/">Weather Website</a>
 
 # Screenshot of Website
-<img src="./images/Scrennshot-weather.png" alt="Weather Dashboard Preview" />
+<img src="./assets/images/Screenshot weather.png" alt="Weather Dashboard Preview" />
 
 # Contributors
 Josh Jackson
