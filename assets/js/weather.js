@@ -106,11 +106,9 @@ var getFutureForecast = function(search) {
     fetch(future).then(function(response) {
         response.json().then(function(data) {
             displayForecast(data, search);
-        });
-    });
+        })
+    })
 };
-
-getFutureForecast("Los Angeles");
 
 var futureConditionHandler = function(event) {
     event.preventDefault();
@@ -172,7 +170,7 @@ var displayForecast  = function(search, searchTerm) {
     windOneForecastEl.textContent = windOne;
     humidityOneForecastEl.textContent = humidityOne;
     tempTwoEl.textContent = tempTwo;
-    windTwoEl.textcontent = windTwo;
+    windTwoEl.textContent = windTwo;
     humidiyTwoEl.textContent = humidityTwo;
     tempThreeEl.textContent = tempThree;
     windThreeEl.textContent = windThree;
