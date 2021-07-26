@@ -1,3 +1,18 @@
+var humidityFiveEl = document.querySelector("#lightning");
+var windFiveEl = document.querySelector("#shower");
+var tempFiveEl = document.querySelector("#sunami");
+var humidityFourEl = document.querySelector("#tornado");
+var windFourEl = document.querySelector("#fire");
+var tempFourEl = document.querySelector("#red");
+var humidityThreeEl = document.querySelector("#swamp");
+var windThreeEl = document.querySelector("#water");
+var tempThreeEl = document.querySelector("#blue");
+var humidiyTwoEl = document.querySelector("#space");
+var windTwoEl = document.querySelector("#sky");
+var tempTwoEl = document.querySelector("#forest");
+var humidityOneForecastEl = document.querySelector("#clear");
+var windOneForecastEl = document.querySelector("#sunny");
+var tempOneForecastEl = document.querySelector("#rain");
 var cityHumidityEl = document.querySelector("#moisture");
 var cityWindEl = document.querySelector("#blow");
 var cityTempEl = document.querySelector("#cold-hot");
@@ -6,7 +21,6 @@ var searchInforEl = document.querySelector("#city-facts");
 var citySearchEl = document.querySelector("#search-history");
 var cityFormEl = document.querySelector("#city-box");
 var cityInputEl = document.querySelector("#city-search");
-var todaysDate = document.querySelector("#date");
 
 var getCityInformation = function(city) {
   // formatting the api
@@ -113,6 +127,62 @@ var futureConditionHandler = function(event) {
 var displayForecast  = function(search, searchTerm) {
     console.log(search);
     console.log(searchTerm);
+
+    // create variables for all of the span elements
+    var tempOne = search.list[0].main.temp
+    console.log(tempOne);
+
+    var windOne = search.list[0].wind.speed
+    console.log(windOne);
+
+    var humidityOne = search.list[0].main.humidity
+    console.log(humidityOne);
+
+    var tempTwo = search.list[1].main.temp
+    console.log(tempTwo);
+
+    var windTwo = search.list[1].wind.speed
+    console.log(windTwo);
+
+    var humidityTwo = search.list[1].main.humidity
+    console.log(humidityTwo);
+
+    var tempThree = search.list[2].main.temp
+    console.log(tempThree);
+
+    var windThree = search.list[2].wind.speed
+
+    var humidityThree = search.list[2].main.humidity
+
+    var tempFour = search.list[3].main.temp
+
+    var windFour = search.list[3].wind.speed
+
+    var humidityFour = search.list[3].main.humidity
+
+    var tempFive = search.list[4].main.temp
+
+    var windFive = search.list[4].wind.speed
+
+    var humidityFive = search.list[4].main.humidity
+
+    // sending the content for each of the boxes
+
+    tempOneForecastEl.textContent = tempOne;
+    windOneForecastEl.textContent = windOne;
+    humidityOneForecastEl.textContent = humidityOne;
+    tempTwoEl.textContent = tempTwo;
+    windTwoEl.textcontent = windTwo;
+    humidiyTwoEl.textContent = humidityTwo;
+    tempThreeEl.textContent = tempThree;
+    windThreeEl.textContent = windThree;
+    humidityThreeEl.textContent = humidityThree;
+    tempFourEl.textContent = tempFour;
+    windFourEl.textContent = windFour;
+    humidityFourEl.textContent = humidityFour;
+    tempFiveEl.textContent = tempFive;
+    windFiveEl.textContent = windFive;
+    humidityFiveEl.textContent = humidityFive;
 }
 
 cityFormEl.addEventListener("submit", citySubmitHandler);
