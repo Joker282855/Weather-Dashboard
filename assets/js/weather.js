@@ -6,6 +6,7 @@ var searchInforEl = document.querySelector("#city-facts");
 var citySearchEl = document.querySelector("#search-history");
 var cityFormEl = document.querySelector("#city-box");
 var cityInputEl = document.querySelector("#city-search");
+var todaysDate = document.querySelector("#date");
 
 var getCityInformation = function(city) {
   // formatting the api
