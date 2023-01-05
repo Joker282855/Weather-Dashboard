@@ -1,7 +1,7 @@
 # Weather-Dashboard
 
 # Description
--created a website that allows people to find our the weather in different cities across America. The webiste is pretty clear on how it is going to be used and is very easy to navigate. the website also contains a five day forecast sections which displays informaiton for the next five days.
+Created a website that allows people to find our the weather in different cities across America. The webiste is pretty clear on how it is going to be used and is very easy to navigate. the website also contains a five day forecast sections which displays informaiton for the next five days.
 
 # Assignment Tasks
 1. to show current and future weather conditions for a specific city and have the name of that city added to the search history section
